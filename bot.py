@@ -1,7 +1,3 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import filters, Client, errors, enums
 from pyrogram.errors import UserNotParticipant
@@ -59,7 +55,8 @@ async def op(_, m :Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/Io_TesterBot?startgroup")
+                        InlineKeyboardButton("➕ Add me to your group ➕", url="https://t.me/FastRequestAccept_Bot?startgroup"),
+                        InlineKeyboardButton("➕ Add me to your channel ➕", url="https://t.me/FastRequestAccept_Bot?startchannel"),
                     ]
                 ]
             )
@@ -97,9 +94,9 @@ async def chk(_, cb : CallbackQuery):
         if cb.message.chat.type == enums.ChatType.PRIVATE:
             keyboard = InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/vjmasterblastbot?startgroup")
-                    ]
+                    InlineKeyboardButton("➕ Add me to your group ➕", url="https://t.me/FastRequestAccept_Bot?startgroup"),
+                    InlineKeyboardButton("➕ Add me to your channel ➕", url="https://t.me/FastRequestAccept_Bot?startchannel"),
+                    
                 ]
             )
             add_user(cb.from_user.id)

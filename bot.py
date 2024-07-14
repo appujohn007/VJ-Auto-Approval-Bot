@@ -89,7 +89,7 @@ async def op(_, m :Message):
 @app.on_callback_query(filters.regex("chk"))
 async def chk(_, cb : CallbackQuery):
     await app.get_chat_member(cfg.CHID, cb.from_user.id)
-        if cb.message.chat.type == enums.ChatType.PRIVATE:
+    if cb.message.chat.type == enums.ChatType.PRIVATE:
             keyboard = InlineKeyboardMarkup(
                 [
                     InlineKeyboardButton("➕ Add me to your group ➕", url="https://t.me/FastRequestAccept_Bot?startgroup"),

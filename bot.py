@@ -99,7 +99,7 @@ async def chk(_, cb : CallbackQuery):
             )
             add_user(cb.from_user.id)
             await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve Admin Join RequestsBot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.**".format(cb.from_user.mention), reply_markup=keyboard)
-        print(cb.from_user.first_name +" Is started Your Bot!")
+            print(cb.from_user.first_name +" Is started Your Bot!")
 #    except UserNotParticipant:
      #   await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
 

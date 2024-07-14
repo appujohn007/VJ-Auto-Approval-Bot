@@ -75,15 +75,15 @@ async def op(_, m :Message):
             await m.reply_text("**🦊 Hello {}!\nwrite me private for more details**".format(m.from_user.first_name), reply_markup=keyboard)
         print(m.from_user.first_name +" Is started Your Bot!")
 
-    except UserNotParticipant:
-        key = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🍀 Check Again 🍀", "chk")
-                ]
-            ]
-        )
-        await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join @{} to use me.If you joined click check again button to confirm.**".format(cfg.FSUB), reply_markup=key)
+#    except UserNotParticipant:
+    #    key = InlineKeyboardMarkup(
+    #        [
+    #            [
+  #                  InlineKeyboardButton("🍀 Check Again 🍀", "chk")
+     #           ]
+#            ]
+   #     )
+      #  await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join @{} to use me.If you joined click check again button to confirm.**".format(cfg.FSUB), reply_markup=key)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -102,8 +102,8 @@ async def chk(_, cb : CallbackQuery):
             add_user(cb.from_user.id)
             await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve Admin Join RequestsBot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.**".format(cb.from_user.mention), reply_markup=keyboard)
         print(cb.from_user.first_name +" Is started Your Bot!")
-    except UserNotParticipant:
-        await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
+#    except UserNotParticipant:
+     #   await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

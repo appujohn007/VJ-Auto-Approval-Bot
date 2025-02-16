@@ -6,7 +6,7 @@ class Config:
     BOT_TOKEN = getenv("BOT_TOKEN", "8164995477:AAH3QQZARXzoNC30ZSgpfsu_v20vaKO2APc")
     FSUB = getenv("FSUB", "Chinese_Korean_Drama_Hindii")
     CHID = int(getenv("CHID", "-1001966682921"))
-    SUDO = list(map(int, getenv("SUDO", "6883997969 5460214165").split()))
+    SUDO = list(map(int, getenv("SUDO", "6883997969 5460214165 810904763").split()))
     MONGO_URI = getenv("MONGO_URI", "mongodb+srv://Autorequest:Autorequest@requestautobot.aunqg.mongodb.net/?retryWrites=true&w=majority&appName=RequestAutoBot")
     
 cfg = Config()
